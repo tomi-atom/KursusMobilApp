@@ -7,6 +7,8 @@ data class User(
     val name: String?,
     val image: String?,
     val phone_number: String?,
+    val birth_date: String?,
+    val address: String?,
     val updated_at: String?,
     val created_at: String?,
     var toko: Toko?

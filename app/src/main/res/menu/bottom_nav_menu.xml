@@ -2,6 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_asset_settings"
+        android:title="Akun" />
+    <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_asset_home"
         android:title="@string/title_home" />
@@ -16,9 +20,6 @@
         android:icon="@drawable/ic_shopping_cart"
         android:title="Keranjang" />
 
-    <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_asset_settings"
-        android:title="Akun" />
+
 
 </menu>

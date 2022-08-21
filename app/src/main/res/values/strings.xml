@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">Kursus Mobil</string>
     <string name="hello">Hello World!</string>
-    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_activity_navigation">Kursus Mobil</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="cari_produk_disini">Cari produk disini</string>
-    <string name="buka_toko_gratis">Buka Toko Gratis</string>
+    <string name="buka_toko_gratis">Daftar Kursus</string>
     <string name="mau_mulai_berbisnis">Mau Mulai Berbisnis?</string>
     <string name="pilih_alamat">Pilih Alamat</string>
     <string name="tidak_ada_data">Tidak ada data</string>

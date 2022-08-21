@@ -33,7 +33,7 @@
                         android:layout_height="match_parent"
                         android:background="@color/colorPrimary"
                         android:gravity="center"
-                        android:text="TW"
+                        android:text=""
                         android:textColor="@color/white"
                         android:textSize="@dimen/_25sdp"
                         android:textStyle="bold" />
@@ -60,7 +60,7 @@
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tisto wahyudi"
+                    android:text="Nama"
                     android:textColor="@color/dark"
                     android:textSize="@dimen/_12ssp"
                     android:textStyle="bold" />
@@ -69,7 +69,7 @@
                     android:id="@+id/tv_phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0811111"
+                    android:text="Nomor Hp"
                     android:textColor="@color/dark"
                     android:textSize="@dimen/_12ssp" />
 
@@ -77,7 +77,7 @@
                     android:id="@+id/tv_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="email@gmail.com"
+                    android:text="email"
                     android:textColor="@color/dark"
                     android:textSize="@dimen/_12ssp" />
 
@@ -120,7 +120,7 @@
                     android:id="@+id/tv_nameToko"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/mau_mulai_berbisnis"
+                    android:text="Mau Belajar Mobil"
                     android:textColor="@color/dark"
                     android:textSize="@dimen/_12ssp" />
 
@@ -129,7 +129,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_3sdp"
-                    android:text="@string/buka_toko_gratis"
+                    android:text="Daftar Sekarang"
                     android:textColor="@color/dark"
                     android:textSize="@dimen/_12ssp"
                     android:textStyle="bold" />

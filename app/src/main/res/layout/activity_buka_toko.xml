@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Masukkan info toko"
+                android:text="Daftar Kursus"
                 android:textColor="@color/dark"
                 android:textSize="@dimen/_15sdp"
                 android:textStyle="bold" />
@@ -53,6 +53,8 @@
                 android:textColor="@color/grey6"
                 android:textSize="@dimen/_10ssp" />
 
+
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -63,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_15sdp"
                     android:background="@color/white"
-                    android:hint="Lokasi Tokomu"
+                    android:hint="Lokasi Rumah"
                     android:inputType="textEmailAddress"
                     android:paddingStart="0dp" />
 
@@ -73,7 +75,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_3sdp"
-                android:text="Lokasi toko untuk memudahkan pembeli mengetahui darimana barang akan dikirim"
+                android:text="Lokasi Rumah Untuk memudahkan Penjemputan"
+                android:textColor="@color/grey6"
+                android:textSize="@dimen/_10ssp" />
+
+            <CheckBox
+                android:id="@+id/jemput"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jemput Kerumah" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text="Centang Jika Ingin di Jemput Kosongkan bila tidak ingin jemput"
+                android:textColor="@color/grey6"
+                android:textSize="@dimen/_10ssp" />
+            <CheckBox
+                android:id="@+id/sim"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jemput Kerumah" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text="Centang Jika Ingin di Membuat SIM Kosongkan bila tidak ingin Membuat SiM"
                 android:textColor="@color/grey6"
                 android:textSize="@dimen/_10ssp" />
 

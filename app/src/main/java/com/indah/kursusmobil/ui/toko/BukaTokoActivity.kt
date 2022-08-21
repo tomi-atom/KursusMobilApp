@@ -19,7 +19,7 @@ class BukaTokoActivity : MyActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityBukaTokoBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setToolbar(binding.lyToolbar.toolbar, "Buka Toko")
+        setToolbar(binding.lyToolbar.toolbar, "Daftar Kursus")
 
         mainButton()
     }

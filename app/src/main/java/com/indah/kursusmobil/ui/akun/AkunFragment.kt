@@ -28,13 +28,8 @@ class AkunFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        notificationsViewModel =
-            ViewModelProvider(this).get(AkunViewModel::class.java)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        notificationsViewModel = ViewModelProvider(this).get(AkunViewModel::class.java)
 
         _binding = FragmentAkunBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -68,6 +63,7 @@ class AkunFragment : Fragment() {
             binding.apply {
                 tvName.text = user.name
                 tvEmail.text = user.email
+                tvPhone.text = user.phone_number
                 tvPhone.text = user.phone_number
                 tvInisial.text = user.name.getInitial()
 

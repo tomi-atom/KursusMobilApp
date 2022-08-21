@@ -7,13 +7,21 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.indah.kursusmobil.databinding.FragmentHomeBinding
+import com.indah.kursusmobil.ui.home.adapter.CategoryAdapter
+import com.indah.kursusmobil.ui.home.adapter.ProductTerbaruAdapter
+import com.indah.kursusmobil.ui.home.adapter.ProductTerlarisAdapter
+import com.indah.kursusmobil.ui.home.adapter.SliderAdapter
 
 class HomeFragment : Fragment() {
 
     private lateinit var viewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private val adapterCategory = CategoryAdapter()
+    private val adapterSlider = SliderAdapter()
 
+    private val adapterProductTerlaris = ProductTerlarisAdapter()
+    private val adapterProductTerbaru = ProductTerbaruAdapter()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
@@ -21,12 +29,33 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-
+        setupAdapter()
+        setData()
         mainButton()
         return root
     }
 
+    private fun setupAdapter() {
+        binding.rvCategory.adapter = adapterCategory
+        binding.rvSlider.adapter = adapterSlider
+        binding.rvProductTerlaris.adapter = adapterProductTerlaris
+        binding.rvProductTerbaru.adapter = adapterProductTerbaru
+    }
 
+    private fun setData() {
+        viewModel.listCategory.observe(requireActivity(), {
+            adapterCategory.addItems(it)
+        })
+
+        viewModel.listSlider.observe(requireActivity(), {
+            adapterSlider.addItems(it)
+        })
+
+        viewModel.listProduct.observe(requireActivity(), {
+            adapterProductTerlaris.addItems(it)
+            adapterProductTerbaru.addItems(it)
+        })
+    }
 
     fun mainButton() {
 

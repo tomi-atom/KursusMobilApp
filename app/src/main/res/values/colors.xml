@@ -12,15 +12,15 @@
     <color name="colorPrimaryVariant">@color/colorPrimary_700</color>
     <color name="colorOnPrimary">@color/white</color>
 
-    <color name="colorPrimary_50">#e6f5e4</color>
-    <color name="colorPrimary_100">#c2e6bc</color>
-    <color name="colorPrimary_200">#9ad691</color>
-    <color name="colorPrimary_300">#6dc762</color>
-    <color name="colorPrimary_400">#47bb3d</color>
-    <color name="colorPrimary_500">#09af00</color>
-    <color name="colorPrimary_600">#00a000</color>
-    <color name="colorPrimary_700">#008e00</color>
-    <color name="colorPrimary_800">#007d00</color>
+    <color name="colorPrimary_50">#E1F5FE</color>
+    <color name="colorPrimary_100">#B3E5FC</color>
+    <color name="colorPrimary_200">#81D4FA</color>
+    <color name="colorPrimary_300">#4FC3F7</color>
+    <color name="colorPrimary_400">#29B6F6</color>
+    <color name="colorPrimary_500">#03A9F4</color>
+    <color name="colorPrimary_600">#0288D1</color>
+    <color name="colorPrimary_700">#0277BD</color>
+    <color name="colorPrimary_800">#01579B</color>
 
     <color name="yellowSoft">#FFC107</color>
     <color name="greenSoft">#00B608</color>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">https://kursus2.octasoft.my.id/</domain>
+        <domain includeSubdomains="true">https://kursus.octasoft.my.id/</domain>
     </domain-config>
 </network-security-config>

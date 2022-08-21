@@ -3,7 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation2"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_notifications">
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.indah.kursusmobil.ui.akun.AkunFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_keranjang" />
 
     <fragment
         android:id="@+id/navigation_home"
@@ -23,11 +28,6 @@
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_akun" />
 
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.indah.kursusmobil.ui.akun.AkunFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_keranjang" />
 
 
 </navigation>

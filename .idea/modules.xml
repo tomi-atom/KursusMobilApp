@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MarketPlaces.iml" filepath="$PROJECT_DIR$/.idea/modules/MarketPlaces.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MarketPlaces.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MarketPlaces.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MarketPlaces.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MarketPlaces.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MarketPlaces.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MarketPlaces.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MarketPlaces.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MarketPlaces.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/KursusMobil.iml" filepath="$PROJECT_DIR$/.idea/modules/KursusMobil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/KursusMobil.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/KursusMobil.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/KursusMobil.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/KursusMobil.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/KursusMobil.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/KursusMobil.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/KursusMobil.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/KursusMobil.app.unitTest.iml" />
     </modules>
   </component>
 </project>

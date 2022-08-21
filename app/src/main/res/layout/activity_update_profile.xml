@@ -41,16 +41,16 @@
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimary"
                 android:gravity="center"
-                android:text="TW"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="@dimen/_35sdp"
                 android:textStyle="bold" />
 
             <ImageView
-                android:scaleType="centerCrop"
                 android:id="@+id/image_profile"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
 
         </RelativeLayout>
 
@@ -75,7 +75,7 @@
                 android:hint="Nama Lengkap"
                 android:inputType="textEmailAddress"
                 android:paddingStart="0dp"
-                android:text="Tisto" />
+                android:text="Nama" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -92,7 +92,7 @@
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:paddingStart="0dp"
-                android:text="tisto@gmail.com" />
+                android:text="" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,6 +110,40 @@
                 android:inputType="number"
                 android:paddingStart="0dp"
                 android:text="12345678" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_tanggal_lahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/white"
+                android:hint="Tanggal Lahir"
+                android:inputType="number"
+                android:paddingStart="0dp"
+                android:text="" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/white"
+                android:hint="Alamat"
+                android:inputType="number"
+                android:paddingStart="0dp"
+                android:text="" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
