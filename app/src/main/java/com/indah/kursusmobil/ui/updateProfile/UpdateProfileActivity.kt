@@ -41,6 +41,8 @@ class UpdateProfileActivity : MyActivity() {
                 edtName.setText(user.name)
                 edtEmail.setText(user.email)
                 edtPhone.setText(user.phone_number)
+                edtTanggalLahir.setText(user.birth_date)
+                edtAlamat.setText(user.address)
                 tvInisial.text = user.name.getInitial()
                 Picasso.get().load(Constants.USER_URL + user.image).into(binding.imageProfile)
             }
@@ -89,7 +91,9 @@ class UpdateProfileActivity : MyActivity() {
                 idUser.int(),
                 phone_number = binding.edtPhone.text.toString(),
                 email = binding.edtEmail.text.toString(),
-                name = binding.edtName.text.toString()
+                name = binding.edtName.text.toString(),
+                birth_date = binding.edtTanggalLahir.text.toString(),
+                address = binding.edtAlamat.text.toString()
         )
 
         viewModel.updateUser(body).observe(this, {

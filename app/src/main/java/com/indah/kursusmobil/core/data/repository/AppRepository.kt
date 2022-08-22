@@ -4,7 +4,7 @@ import com.indah.kursusmobil.core.data.source.local.LocalDataSource
 import com.indah.kursusmobil.core.data.source.model.AlamatToko
 import com.indah.kursusmobil.core.data.source.remote.RemoteDataSource
 import com.indah.kursusmobil.core.data.source.remote.network.Resource
-import com.indah.kursusmobil.core.data.source.remote.request.CreateTokoRequest
+import com.indah.kursusmobil.core.data.source.remote.request.CreateKursusRequest
 import com.indah.kursusmobil.core.data.source.remote.request.LoginRequest
 import com.indah.kursusmobil.core.data.source.remote.request.RegisterRequest
 import com.indah.kursusmobil.core.data.source.remote.request.UpdateProfileRequest
@@ -97,7 +97,7 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
         }
     }
 
-    fun createToko(data: CreateTokoRequest) = flow {
+    fun createToko(data: CreateKursusRequest) = flow {
         emit(Resource.loading(null))
         try {
             remote.createToko(data).let {

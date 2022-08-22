@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.indah.kursusmobil.ui.navigation.NavigationActivity
 import com.indah.kursusmobil.databinding.FragmentAkunBinding
-import com.indah.kursusmobil.ui.toko.BukaTokoActivity
-import com.indah.kursusmobil.ui.toko.TokoSayaActivity
+import com.indah.kursusmobil.ui.kursus.DaftarKursusActivity
+import com.indah.kursusmobil.ui.kursus.KursusSayaActivity
 import com.indah.kursusmobil.ui.updateProfile.UpdateProfileActivity
 import com.indah.kursusmobil.util.Constants.USER_URL
 import com.indah.kursusmobil.util.Prefs
@@ -73,11 +73,11 @@ class AkunFragment : Fragment() {
                     tvStatusToko.toGone()
                     tvNameToko.text = user.toko?.name
                     binding.btnToko.setOnClickListener {
-                        intentActivity(TokoSayaActivity::class.java)
+                        intentActivity(KursusSayaActivity::class.java)
                     }
                 } else {
                     binding.btnToko.setOnClickListener {
-                        intentActivity(BukaTokoActivity::class.java)
+                        intentActivity(DaftarKursusActivity::class.java)
                     }
                 }
             }

@@ -5,23 +5,24 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.indah.kursusmobil.core.data.source.model.Category
+import com.indah.kursusmobil.core.data.source.model.Kursus
 import com.indah.kursusmobil.databinding.ItemHomeCategoryBinding
 
 @SuppressLint("NotifyDataSetChanged")
-class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
+class KursusAdapter : RecyclerView.Adapter<KursusAdapter.ViewHolder>() {
 
-    private var data = ArrayList<Category>()
+    private var data = ArrayList<Kursus>()
 
     inner class ViewHolder(private val itemBinding: ItemHomeCategoryBinding) : RecyclerView.ViewHolder(itemBinding.root) {
-        fun bind(item: Category, position: Int) {
+        fun bind(item: Kursus, position: Int) {
             itemBinding.apply {
-                tvName.text = item.name
-                imageView.setImageResource(item.image)
+                tvName.text = item.id_peserta
+
             }
         }
     }
 
-    fun addItems(items: List<Category>) {
+    fun addItems(items: List<Kursus>) {
         data.addAll(items)
         notifyDataSetChanged()
     }

@@ -22,11 +22,7 @@
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
-    <fragment
-        android:id="@+id/navigation_keranjang"
-        android:name="com.indah.kursusmobil.ui.keranjang.KeranjangFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_akun" />
+
 
 
 

@@ -3,14 +3,14 @@ package com.indah.kursusmobil.ui
 import android.os.Bundle
 import com.indah.kursusmobil.databinding.ActivityBukaTokoBinding
 import com.indah.kursusmobil.ui.base.MyActivity
-import com.indah.kursusmobil.ui.toko.TokoViewModel
+import com.indah.kursusmobil.ui.kursus.KursusViewModel
 import com.inyongtisto.myhelper.extension.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class BaruActivity : MyActivity() {
 
     private lateinit var binding: ActivityBukaTokoBinding
-    private val viewModel: TokoViewModel by viewModel()
+    private val viewModel: KursusViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

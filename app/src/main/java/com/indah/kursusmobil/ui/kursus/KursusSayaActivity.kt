@@ -1,4 +1,4 @@
-package com.indah.kursusmobil.ui.toko
+package com.indah.kursusmobil.ui.kursus
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,7 +11,7 @@ import com.inyongtisto.myhelper.extension.intentActivity
 import com.inyongtisto.myhelper.extension.setToolbar
 import com.squareup.picasso.Picasso
 
-class TokoSayaActivity : AppCompatActivity() {
+class KursusSayaActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTokoSayaBinding
 

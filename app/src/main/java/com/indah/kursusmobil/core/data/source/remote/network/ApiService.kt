@@ -1,7 +1,7 @@
 package com.indah.kursusmobil.core.data.source.remote.network
 
 import com.indah.kursusmobil.core.data.source.model.AlamatToko
-import com.indah.kursusmobil.core.data.source.remote.request.CreateTokoRequest
+import com.indah.kursusmobil.core.data.source.remote.request.CreateKursusRequest
 import com.indah.kursusmobil.core.data.source.remote.request.LoginRequest
 import com.indah.kursusmobil.core.data.source.remote.request.RegisterRequest
 import com.indah.kursusmobil.core.data.source.remote.request.UpdateProfileRequest
@@ -38,12 +38,12 @@ interface ApiService {
 
     @POST("toko")
     suspend fun createToko(
-        @Body data: CreateTokoRequest
+        @Body data: CreateKursusRequest
     ): Response<BaseSingelResponse<TokoResponse>>
 
     @POST("product")
     suspend fun createProduct(
-        @Body data: CreateTokoRequest
+        @Body data: CreateKursusRequest
     ): Response<BaseSingelResponse<ProductResponse>>
 
     @GET("toko-user/{id}")

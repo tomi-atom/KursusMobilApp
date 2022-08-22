@@ -1,4 +1,4 @@
-package com.indah.kursusmobil.ui.alamatToko.adapter
+package com.indah.kursusmobil.ui.home.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater

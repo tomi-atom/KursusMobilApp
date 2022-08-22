@@ -8,17 +8,13 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_asset_home"
-        android:title="@string/title_home" />
+        android:title="Kursus" />
 
     <item
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/ic_asset_clipboard"
-        android:title="@string/title_dashboard" />
+        android:title="Jadwal" />
 
-    <item
-        android:id="@+id/navigation_keranjang"
-        android:icon="@drawable/ic_shopping_cart"
-        android:title="Keranjang" />
 
 
 

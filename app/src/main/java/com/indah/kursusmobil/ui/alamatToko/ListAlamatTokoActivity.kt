@@ -4,7 +4,7 @@ import android.os.Bundle
 import com.indah.kursusmobil.core.data.source.model.AlamatToko
 import com.indah.kursusmobil.core.data.source.remote.network.State
 import com.indah.kursusmobil.databinding.ActivityAlamatTokoListBinding
-import com.indah.kursusmobil.ui.alamatToko.adapter.AlamatTokoAdapter
+import com.indah.kursusmobil.ui.home.adapter.AlamatTokoAdapter
 import com.indah.kursusmobil.ui.base.MyActivity
 import com.indah.kursusmobil.util.defaultError
 import com.inyongtisto.myhelper.extension.*

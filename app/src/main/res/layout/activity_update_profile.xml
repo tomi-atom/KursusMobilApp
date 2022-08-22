@@ -124,7 +124,7 @@
                 android:layout_marginTop="@dimen/_20sdp"
                 android:background="@color/white"
                 android:hint="Tanggal Lahir"
-                android:inputType="number"
+                android:inputType="date"
                 android:paddingStart="0dp"
                 android:text="" />
 

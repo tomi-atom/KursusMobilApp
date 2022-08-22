@@ -7,21 +7,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.indah.kursusmobil.databinding.FragmentHomeBinding
-import com.indah.kursusmobil.ui.home.adapter.CategoryAdapter
-import com.indah.kursusmobil.ui.home.adapter.ProductTerbaruAdapter
-import com.indah.kursusmobil.ui.home.adapter.ProductTerlarisAdapter
-import com.indah.kursusmobil.ui.home.adapter.SliderAdapter
+import com.indah.kursusmobil.ui.home.adapter.KursusAdapter
 
 class HomeFragment : Fragment() {
 
     private lateinit var viewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    private val adapterCategory = CategoryAdapter()
-    private val adapterSlider = SliderAdapter()
+    private val adapterKursus = KursusAdapter()
 
-    private val adapterProductTerlaris = ProductTerlarisAdapter()
-    private val adapterProductTerbaru = ProductTerbaruAdapter()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
@@ -36,25 +30,16 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupAdapter() {
-        binding.rvCategory.adapter = adapterCategory
-        binding.rvSlider.adapter = adapterSlider
-        binding.rvProductTerlaris.adapter = adapterProductTerlaris
-        binding.rvProductTerbaru.adapter = adapterProductTerbaru
+        binding.rvKursus.adapter = adapterKursus
+
     }
 
     private fun setData() {
-        viewModel.listCategory.observe(requireActivity(), {
-            adapterCategory.addItems(it)
+        viewModel.listKursus.observe(requireActivity(), {
+            adapterKursus.addItems(it)
         })
 
-        viewModel.listSlider.observe(requireActivity(), {
-            adapterSlider.addItems(it)
-        })
 
-        viewModel.listProduct.observe(requireActivity(), {
-            adapterProductTerlaris.addItems(it)
-            adapterProductTerbaru.addItems(it)
-        })
     }
 
     fun mainButton() {

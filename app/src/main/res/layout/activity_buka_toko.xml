@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_15sdp"
                     android:background="@color/white"
-                    android:hint="Apa Nama Tokomu"
+                    android:hint="Daftar"
                     android:inputType="textEmailAddress"
                     android:paddingStart="0dp" />
 
@@ -80,7 +80,7 @@
                 android:textSize="@dimen/_10ssp" />
 
             <CheckBox
-                android:id="@+id/jemput"
+                android:id="@+id/check_jemput"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -93,11 +93,11 @@
                 android:textColor="@color/grey6"
                 android:textSize="@dimen/_10ssp" />
             <CheckBox
-                android:id="@+id/sim"
+                android:id="@+id/check_sim"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jemput Kerumah" />
+                android:text="SIM" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -106,6 +106,8 @@
                 android:textColor="@color/grey6"
                 android:textSize="@dimen/_10ssp" />
 
+
+
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -113,7 +115,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_45sdp"
             android:layout_alignParentBottom="true"
-            android:text="Buat Toko"
+            android:text="Daftar Kursus"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp" />
 

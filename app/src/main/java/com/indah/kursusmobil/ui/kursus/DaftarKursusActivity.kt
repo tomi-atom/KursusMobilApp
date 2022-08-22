@@ -1,19 +1,19 @@
-package com.indah.kursusmobil.ui.toko
+package com.indah.kursusmobil.ui.kursus
 
 import android.os.Bundle
 import com.indah.kursusmobil.core.data.source.model.Toko
 import com.indah.kursusmobil.core.data.source.remote.network.State
-import com.indah.kursusmobil.core.data.source.remote.request.CreateTokoRequest
+import com.indah.kursusmobil.core.data.source.remote.request.CreateKursusRequest
 import com.indah.kursusmobil.databinding.ActivityBukaTokoBinding
 import com.indah.kursusmobil.ui.base.MyActivity
 import com.indah.kursusmobil.util.Prefs
 import com.inyongtisto.myhelper.extension.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class BukaTokoActivity : MyActivity() {
+class DaftarKursusActivity : MyActivity() {
 
     private lateinit var binding: ActivityBukaTokoBinding
-    private val viewModel: TokoViewModel by viewModel()
+    private val viewModel: KursusViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,10 +31,12 @@ class BukaTokoActivity : MyActivity() {
     }
 
     private fun bukaToko() {
-        val body = CreateTokoRequest(
+        val body = CreateKursusRequest(
             userId = Prefs.getUser()?.id ?: 0,
             name = binding.edtName.getString(),
-            kota = binding.edtLokasi.getString()
+            kota = binding.edtLokasi.getString(),
+
+
         )
         viewModel.createToko(body).observe(this) {
             when (it.state) {
@@ -42,7 +44,7 @@ class BukaTokoActivity : MyActivity() {
                     progress.dismiss()
                     val data = it.data
                     toastSimple("nama Toko:" + data?.name)
-                    intentActivity(TokoSayaActivity::class.java)
+                    intentActivity(KursusSayaActivity::class.java)
 
                     val user = Prefs.getUser()
                     user?.toko = Toko(

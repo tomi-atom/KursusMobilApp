@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context="com.indah.kursusmobil.MainActivity">
 
-    <include layout="@layout/layout_home_toolbar" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -19,45 +18,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include layout="@layout/layout_home_member" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:paddingHorizontal="@dimen/_5sdp"
-                android:id="@+id/rv_category"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="visible"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="5"
-                tools:itemCount="10"
-                tools:listitem="@layout/item_home_category" />
 
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:scrollbars="none"
-                android:visibility="visible">
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_slider"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        tools:itemCount="3"
-                        tools:listitem="@layout/item_home_slider" />
-
-                </RelativeLayout>
-
-            </HorizontalScrollView>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -68,58 +32,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Terlaris hari ini"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_15sdp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:text="Lihat Semua"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/_13sdp"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:scrollbars="none"
-                android:visibility="visible">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp">
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_product_terlaris"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        tools:itemCount="3"
-                        tools:listitem="@layout/item_home_produk_terlaris" />
-
-                </RelativeLayout>
-
-            </HorizontalScrollView>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_15sdp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Produk terbaru"
+                    android:text="Kursus"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_15sdp"
                     android:textStyle="bold" />
@@ -137,7 +50,7 @@
             </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_product_terbaru"
+                android:id="@+id/rv_kursus"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="@dimen/_5sdp"
