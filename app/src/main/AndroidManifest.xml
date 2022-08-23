@@ -41,9 +41,9 @@
         <activity android:name=".ui.updateProfile.UpdateProfileActivity" />
         <activity android:name=".ui.kursus.DaftarKursusActivity" />
         <activity android:name=".ui.kursus.KursusSayaActivity" />
-        <activity android:name=".ui.alamatToko.ListAlamatTokoActivity" />
-        <activity android:name=".ui.alamatToko.TambahAlamatTokoActivity" />
-        <activity android:name=".ui.alamatToko.EditAlamatTokoActivity" />
+        <activity android:name=".ui.jadwal.ListJadwalActivity" />
+        <activity android:name=".ui.jadwal.TambahJadwalActivity" />
+        <activity android:name=".ui.jadwal.EditJadwalActivity" />
     </application>
 
 </manifest>

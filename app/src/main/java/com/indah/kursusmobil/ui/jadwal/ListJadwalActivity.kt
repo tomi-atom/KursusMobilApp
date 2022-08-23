@@ -1,4 +1,4 @@
-package com.indah.kursusmobil.ui.alamatToko
+package com.indah.kursusmobil.ui.jadwal
 
 import android.os.Bundle
 import com.indah.kursusmobil.core.data.source.model.AlamatToko
@@ -10,10 +10,10 @@ import com.indah.kursusmobil.util.defaultError
 import com.inyongtisto.myhelper.extension.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class ListAlamatTokoActivity : MyActivity() {
+class ListJadwalActivity : MyActivity() {
 
     private lateinit var binding: ActivityAlamatTokoListBinding
-    private val viewModel: AlamatTokoViewModel by viewModel()
+    private val viewModel: JadwalViewModel by viewModel()
     private var adapter = AlamatTokoAdapter { item, pos ->
         confirmDeleteAlamat(item, pos)
     }
@@ -22,7 +22,7 @@ class ListAlamatTokoActivity : MyActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAlamatTokoListBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setToolbar(binding.lyToolbar.toolbar, "List Alamat")
+        setToolbar(binding.lyToolbar.toolbar, "List Jadwal")
 
         setupUI()
         mainButton()
@@ -68,7 +68,7 @@ class ListAlamatTokoActivity : MyActivity() {
         binding.apply {
             lyToolbar.btnTambah.toVisible()
             lyToolbar.btnTambah.setOnClickListener {
-                intentActivity(TambahAlamatTokoActivity::class.java)
+                intentActivity(TambahJadwalActivity::class.java)
             }
         }
     }

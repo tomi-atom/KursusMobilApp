@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.indah.kursusmobil.core.data.source.model.AlamatToko
 import com.indah.kursusmobil.databinding.ItemAlamatTokoBinding
-import com.indah.kursusmobil.ui.alamatToko.EditAlamatTokoActivity
+import com.indah.kursusmobil.ui.jadwal.EditJadwalActivity
 import com.inyongtisto.myhelper.extension.intentActivity
 import com.inyongtisto.myhelper.extension.popUpMenu
 import com.inyongtisto.myhelper.extension.toJson
@@ -37,7 +37,7 @@ class AlamatTokoAdapter(val onDelete: (item: AlamatToko, pos: Int) -> Unit) :
                     context.popUpMenu(btnMenu, listMenu) {
                         when (it) {
                             "Detail" -> context.intentActivity(
-                                EditAlamatTokoActivity::class.java,
+                                EditJadwalActivity::class.java,
                                 item.toJson()
                             )
                             "Hapus" -> onDelete.invoke(item, adapterPosition)

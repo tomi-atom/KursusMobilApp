@@ -8,6 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.indah.kursusmobil.databinding.FragmentHomeBinding
 import com.indah.kursusmobil.ui.home.adapter.KursusAdapter
+import com.indah.kursusmobil.ui.home.adapter.ProductTerbaruAdapter
+import com.indah.kursusmobil.ui.home.adapter.ProductTerlarisAdapter
+import com.indah.kursusmobil.ui.home.adapter.SliderAdapter
 
 class HomeFragment : Fragment() {
 

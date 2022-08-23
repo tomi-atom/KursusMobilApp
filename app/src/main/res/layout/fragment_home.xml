@@ -37,17 +37,10 @@
                     android:textSize="@dimen/_15sdp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:text="Lihat Semua"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/_13sdp"
-                    android:textStyle="bold" />
 
             </RelativeLayout>
+
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_kursus"

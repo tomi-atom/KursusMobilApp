@@ -1,4 +1,4 @@
-package com.indah.kursusmobil.ui.alamatToko
+package com.indah.kursusmobil.ui.jadwal
 
 import android.os.Bundle
 import com.indah.kursusmobil.core.data.source.model.AlamatToko
@@ -10,10 +10,10 @@ import com.indah.kursusmobil.util.getTokoId
 import com.inyongtisto.myhelper.extension.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class EditAlamatTokoActivity : MyActivity() {
+class EditJadwalActivity : MyActivity() {
 
     private lateinit var binding: ActivityTambahAlamatTokoBinding
-    private val viewModel: AlamatTokoViewModel by viewModel()
+    private val viewModel: JadwalViewModel by viewModel()
     private var provinsiId: Int? = null
     private var kotaId: Int? = null
     private var kecamatanId: Int? = null
