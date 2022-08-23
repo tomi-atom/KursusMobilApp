@@ -2,17 +2,18 @@ package com.indah.kursusmobil.ui.jadwal
 
 import android.os.Bundle
 import com.indah.kursusmobil.core.data.source.model.AlamatToko
+import com.indah.kursusmobil.core.data.source.model.Jadwal
 import com.indah.kursusmobil.core.data.source.remote.network.State
-import com.indah.kursusmobil.databinding.ActivityTambahAlamatTokoBinding
+import com.indah.kursusmobil.databinding.ActivityTambahJadwalBinding
 import com.indah.kursusmobil.ui.base.MyActivity
 import com.indah.kursusmobil.util.defaultError
-import com.indah.kursusmobil.util.getTokoId
+import com.indah.kursusmobil.util.getKursusId
 import com.inyongtisto.myhelper.extension.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class EditJadwalActivity : MyActivity() {
 
-    private lateinit var binding: ActivityTambahAlamatTokoBinding
+    private lateinit var binding: ActivityTambahJadwalBinding
     private val viewModel: JadwalViewModel by viewModel()
     private var provinsiId: Int? = null
     private var kotaId: Int? = null
@@ -21,11 +22,11 @@ class EditJadwalActivity : MyActivity() {
     private var kota: String? = null
     private var kecamatan: String? = null
 
-    private var alamat = AlamatToko()
+    private var jadwal = Jadwal()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityTambahAlamatTokoBinding.inflate(layoutInflater)
+        binding = ActivityTambahJadwalBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setToolbar(binding.lyToolbar.toolbar, "Ubah Alamat")
 
@@ -36,14 +37,14 @@ class EditJadwalActivity : MyActivity() {
 
     private fun getExtra() {
         val extra: String? = getStringExtra()
-        alamat = extra.toModel(AlamatToko::class.java) ?: AlamatToko()
+        jadwal = extra.toModel(Jadwal::class.java) ?: Jadwal()
 
         binding.apply {
-            edtLabel.setText(alamat.label ?: "Rumah")
-            edtAlamat.setText(alamat.alamat)
-            edtKodePos.setText(alamat.kodepost)
-            edtEmail.setText(alamat.email)
-            edtPhone.setText(alamat.phone_number)
+          //  edtLabel.setText(alamat.label ?: "Rumah")
+          //  edtAlamat.setText(alamat.alamat)
+          //  edtKodePos.setText(alamat.kodepost)
+           // edtEmail.setText(alamat.email)
+           // edtPhone.setText(alamat.phone_number)
         }
     }
 
@@ -53,7 +54,7 @@ class EditJadwalActivity : MyActivity() {
         val listKota = listOf("Pilih Kota", "Lamongan", "Semarang", "Bogor")
         val listKecamatan = listOf("Pilih Kecamatan", "Solokuro", "Ngalian", "Ngaglik")
 
-        binding.spnProvinsi.setOnPositionSelectedListener(this, listProvinsi) {
+      /*  binding.spnProvinsi.setOnPositionSelectedListener(this, listProvinsi) {
             if (it == 0) {
                 provinsiId = null
             } else {
@@ -92,7 +93,7 @@ class EditJadwalActivity : MyActivity() {
 
             val indexKec = listKecamatan.indexOfFirst { it == alamat.kecamatan }
             spnKecamatan.setSelection(indexKec)
-        }
+        }*/
 
     }
 
@@ -103,11 +104,8 @@ class EditJadwalActivity : MyActivity() {
                 if (validate()) simpan()
             }
             lyToolbar.btnSimpan.setOnLongClickListener {
-                edtLabel.setText("Rumah")
-                edtAlamat.setText("Jl. Kenangan bersama mantan")
-                edtKodePos.setText("98347")
-                edtEmail.setText("email@gmail.com")
-                edtPhone.setText("0812345678")
+              //  edtLabel.setText("Rumah")
+
                 return@setOnLongClickListener true
             }
         }
@@ -115,7 +113,7 @@ class EditJadwalActivity : MyActivity() {
 
     private fun validate(): Boolean {
         binding.apply {
-            if (edtLabel.isEmpty()) return false
+            /*if (edtLabel.isEmpty()) return false
             if (edtAlamat.isEmpty()) return false
             if (edtKodePos.isEmpty()) return false
             if (edtEmail.isEmpty()) return false
@@ -131,26 +129,15 @@ class EditJadwalActivity : MyActivity() {
             if (kecamatanId == null) {
                 toastSimple("Harap pilih Kecamatan")
                 return false
-            }
+            }*/
         }
         return true
     }
 
     private fun simpan() {
-        val reqData = AlamatToko(
-            id = alamat.id,
-            tokoId = getTokoId(),
-            label = binding.edtLabel.getString(),
-            alamat = binding.edtAlamat.getString(),
-            provinsi = provinsi,
-            kota = kota,
-            kecamatan = kecamatan,
-            provinsiId = provinsiId,
-            kotaId = kotaId,
-            kecamatanId = kotaId,
-            kodepost = binding.edtKodePos.getString(),
-            email = binding.edtEmail.getString(),
-            phone_number = binding.edtPhone.getString(),
+        val reqData = Jadwal(
+           //id = jadwal.id,
+
         )
         viewModel.update(reqData).observe(this) {
             when (it.state) {

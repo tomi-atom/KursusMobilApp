@@ -1,10 +1,10 @@
-package com.indah.kursusmobil.ui.home.adapter
+package com.indah.kursusmobil.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.indah.kursusmobil.core.data.source.model.AlamatToko
+import com.indah.kursusmobil.core.data.source.model.Jadwal
 import com.indah.kursusmobil.databinding.ItemAlamatTokoBinding
 import com.indah.kursusmobil.ui.jadwal.EditJadwalActivity
 import com.inyongtisto.myhelper.extension.intentActivity
@@ -12,24 +12,16 @@ import com.inyongtisto.myhelper.extension.popUpMenu
 import com.inyongtisto.myhelper.extension.toJson
 
 @SuppressLint("NotifyDataSetChanged")
-class AlamatTokoAdapter(val onDelete: (item: AlamatToko, pos: Int) -> Unit) :
-    RecyclerView.Adapter<AlamatTokoAdapter.ViewHolder>() {
+class JadwalAdapter(val onDelete: (item: Jadwal, pos: Int) -> Unit) :
+    RecyclerView.Adapter<JadwalAdapter.ViewHolder>() {
 
-    private var data = ArrayList<AlamatToko>()
+    private var data = ArrayList<Jadwal>()
 
     inner class ViewHolder(private val itemBinding: ItemAlamatTokoBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
         @SuppressLint("SetTextI18n")
-        fun bind(item: AlamatToko, position: Int) {
+        fun bind(item: Jadwal, position: Int) {
             itemBinding.apply {
-                tvKota.text = item.kota
-                var kecamatan = ""
-                if (item.kecamatan != null) kecamatan = ", Kec. ${item.kecamatan}"
-
-                tvAlamat.text =
-                    "${item.alamat}$kecamatan, ${item.kota}, ${item.provinsi}, ${item.kodepost}"
-                tvEmail.text = item.email
-                tvPhone.text = item.phone_number
 
                 val context = root.context
                 btnMenu.setOnClickListener {
@@ -53,7 +45,7 @@ class AlamatTokoAdapter(val onDelete: (item: AlamatToko, pos: Int) -> Unit) :
         notifyItemRemoved(index)
     }
 
-    fun addItems(items: List<AlamatToko>) {
+    fun addItems(items: List<Jadwal>) {
         data.clear()
         data.addAll(items)
         notifyDataSetChanged()

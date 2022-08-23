@@ -1,7 +1,7 @@
 package com.indah.kursusmobil.core.data.repository
 
 import com.indah.kursusmobil.core.data.source.local.LocalDataSource
-import com.indah.kursusmobil.core.data.source.model.AlamatToko
+import com.indah.kursusmobil.core.data.source.model.Jadwal
 import com.indah.kursusmobil.core.data.source.remote.RemoteDataSource
 import com.indah.kursusmobil.core.data.source.remote.network.Resource
 import com.indah.kursusmobil.core.data.source.remote.request.CreateKursusRequest
@@ -132,10 +132,10 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
         }
     }
 
-    fun getAlamatToko() = flow {
+    fun getJadwal() = flow {
         emit(Resource.loading(null))
         try {
-            remote.getAlamatToko().let {
+            remote.getJadwal().let {
                 if (it.isSuccessful) {
                     val body = it.body()
                     val data = body?.data
@@ -150,10 +150,10 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
         }
     }
 
-    fun createAlamatToko(data: AlamatToko) = flow {
+    fun createJadwal(data: Jadwal) = flow {
         emit(Resource.loading(null))
         try {
-            remote.createAlamatToko(data).let {
+            remote.createJadwal(data).let {
                 if (it.isSuccessful) {
                     val body = it.body()?.data
                     emit(Resource.success(body))
@@ -166,10 +166,10 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
         }
     }
 
-    fun updateAlamatToko(data: AlamatToko) = flow {
+    fun updateJadwal(data: Jadwal) = flow {
         emit(Resource.loading(null))
         try {
-            remote.updateAlamatToko(data).let {
+            remote.updateJadwal(data).let {
                 if (it.isSuccessful) {
                     val body = it.body()?.data
                     emit(Resource.success(body))
@@ -182,10 +182,10 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
         }
     }
 
-    fun deleteAlamatToko(id: Int?) = flow {
+    fun deleteJadwal(id: String?) = flow {
         emit(Resource.loading(null))
         try {
-            remote.deleteAlamatToko(id).let {
+            remote.deleteJadwal(id).let {
                 if (it.isSuccessful) {
                     val body = it.body()
                     val data = body?.data

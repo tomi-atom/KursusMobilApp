@@ -70,6 +70,19 @@
                     android:paddingStart="0dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="InstrukProvinsi"
+                android:textAppearance="@style/TypographyStyles.Text3"
+                android:textColor="@color/grey6" />
+
+            <Spinner
+                android:id="@+id/spn_provinsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp" />
 
             <TextView
                 android:layout_width="wrap_content"

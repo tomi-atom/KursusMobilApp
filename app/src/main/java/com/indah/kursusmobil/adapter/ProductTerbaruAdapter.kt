@@ -1,24 +1,22 @@
-package com.indah.kursusmobil.ui.home.adapter
+package com.indah.kursusmobil.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.indah.kursusmobil.core.data.source.model.Category
 import com.indah.kursusmobil.core.data.source.model.Product
-import com.indah.kursusmobil.databinding.ItemHomeCategoryBinding
-import com.indah.kursusmobil.databinding.ItemHomeProdukTerlarisBinding
+import com.indah.kursusmobil.databinding.ItemHomeProdukTerbaruBinding
 import com.inyongtisto.myhelper.extension.coret
 import com.inyongtisto.myhelper.extension.toGone
 import com.inyongtisto.myhelper.extension.toRupiah
 import com.inyongtisto.myhelper.extension.toVisible
 
 @SuppressLint("NotifyDataSetChanged")
-class ProductTerlarisAdapter : RecyclerView.Adapter<ProductTerlarisAdapter.ViewHolder>() {
+class ProductTerbaruAdapter : RecyclerView.Adapter<ProductTerbaruAdapter.ViewHolder>() {
 
     private var data = ArrayList<Product>()
 
-    inner class ViewHolder(private val itemBinding: ItemHomeProdukTerlarisBinding) : RecyclerView.ViewHolder(itemBinding.root) {
+    inner class ViewHolder(private val itemBinding: ItemHomeProdukTerbaruBinding) : RecyclerView.ViewHolder(itemBinding.root) {
         @SuppressLint("SetTextI18n")
         fun bind(item: Product, position: Int) {
             itemBinding.apply {
@@ -33,6 +31,7 @@ class ProductTerlarisAdapter : RecyclerView.Adapter<ProductTerlarisAdapter.ViewH
                     lyGrosir.toGone()
                     lyDiskon.toVisible()
                     tvDiscount.text = "${item.discount}%"
+
                     tvHarga.text = (harga - ((item.discount.toDouble() / 100) * harga)).toRupiah()
                     tvHargaAsli.text = item.harga.toRupiah()
                     tvHargaAsli.coret()
@@ -47,7 +46,7 @@ class ProductTerlarisAdapter : RecyclerView.Adapter<ProductTerlarisAdapter.ViewH
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(ItemHomeProdukTerlarisBinding.inflate(
+        return ViewHolder(ItemHomeProdukTerbaruBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false)

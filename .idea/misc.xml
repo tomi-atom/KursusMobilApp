@@ -24,10 +24,14 @@
         <entry key="..\:/AndroidProject/KursusMobil/app/src/main/res/layout/layout_toolbar.xml" value="0.1890625" />
         <entry key="..\:/AndroidProject/KursusMobil/app/src/main/res/layout/mylayout.xml" value="0.1890625" />
         <entry key="..\:/AndroidProject/KursusMobil/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3338541666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/KursusMobilApp/app/src/main/res/layout/activity_buka_toko.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/KursusMobilApp/app/src/main/res/layout/activity_jadwal_list.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/KursusMobilApp/app/src/main/res/layout/activity_kursus_saya.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/KursusMobilApp/app/src/main/res/layout/activity_tambah_jadwal.xml" value="0.2" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -1,34 +1,32 @@
-package com.indah.kursusmobil.ui.home.adapter
+package com.indah.kursusmobil.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.indah.kursusmobil.core.data.source.model.Category
-import com.indah.kursusmobil.core.data.source.model.Kursus
-import com.indah.kursusmobil.databinding.ItemHomeCategoryBinding
+import com.indah.kursusmobil.core.data.source.model.Slider
+import com.indah.kursusmobil.databinding.ItemHomeSliderBinding
 
 @SuppressLint("NotifyDataSetChanged")
-class KursusAdapter : RecyclerView.Adapter<KursusAdapter.ViewHolder>() {
+class SliderAdapter : RecyclerView.Adapter<SliderAdapter.ViewHolder>() {
 
-    private var data = ArrayList<Kursus>()
+    private var data = ArrayList<Slider>()
 
-    inner class ViewHolder(private val itemBinding: ItemHomeCategoryBinding) : RecyclerView.ViewHolder(itemBinding.root) {
-        fun bind(item: Kursus, position: Int) {
+    inner class ViewHolder(private val itemBinding: ItemHomeSliderBinding) : RecyclerView.ViewHolder(itemBinding.root) {
+        fun bind(item: Slider, position: Int) {
             itemBinding.apply {
-                tvName.text = item.id_peserta
-
+                imageView.setImageResource(item.image)
             }
         }
     }
 
-    fun addItems(items: List<Kursus>) {
+    fun addItems(items: List<Slider>) {
         data.addAll(items)
         notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(ItemHomeCategoryBinding.inflate(
+        return ViewHolder(ItemHomeSliderBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false)

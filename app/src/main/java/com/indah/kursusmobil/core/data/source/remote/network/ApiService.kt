@@ -1,6 +1,7 @@
 package com.indah.kursusmobil.core.data.source.remote.network
 
 import com.indah.kursusmobil.core.data.source.model.AlamatToko
+import com.indah.kursusmobil.core.data.source.model.Jadwal
 import com.indah.kursusmobil.core.data.source.remote.request.CreateKursusRequest
 import com.indah.kursusmobil.core.data.source.remote.request.LoginRequest
 import com.indah.kursusmobil.core.data.source.remote.request.RegisterRequest
@@ -41,6 +42,11 @@ interface ApiService {
         @Body data: CreateKursusRequest
     ): Response<BaseSingelResponse<TokoResponse>>
 
+    @POST("kursus")
+    suspend fun createKursus(
+        @Body data: CreateKursusRequest
+    ): Response<BaseSingelResponse<KursusResponse>>
+
     @POST("product")
     suspend fun createProduct(
         @Body data: CreateKursusRequest
@@ -56,10 +62,20 @@ interface ApiService {
         @Path("id") idToko: Int? = null
     ): Response<BaseListResponse<AlamatToko>>
 
+    @GET("jadwal/{id}")
+    suspend fun getJadwal(
+        @Path("id") idToko: Int? = null
+    ): Response<BaseListResponse<Jadwal>>
+
     @POST("alamat-toko")
     suspend fun createAlamatToko(
         @Body data: AlamatToko
     ): Response<BaseSingelResponse<AlamatToko>>
+
+    @POST("jadwal")
+    suspend fun createJadwal(
+        @Body data: Jadwal
+    ): Response<BaseSingelResponse<Jadwal>>
 
     @PUT("alamat-toko/{id}")
     suspend fun updateAlamatToko(
@@ -67,8 +83,20 @@ interface ApiService {
         @Body data: AlamatToko
     ): Response<BaseSingelResponse<AlamatToko>>
 
+    @PUT("jadwal/{id}")
+    suspend fun updateJadwal(
+        @Path("id") id: String? = null,
+        @Body data: Jadwal
+    ): Response<BaseSingelResponse<Jadwal>>
+
     @DELETE("alamat-toko/{id}")
     suspend fun deleteAlamatToko(
         @Path("id") id: Int? = null
     ): Response<BaseSingelResponse<AlamatToko>>
+
+    @DELETE("jadwal/{id}")
+    suspend fun deleteJadwal(
+        @Path("id") id: String? = null
+    ): Response<BaseSingelResponse<Jadwal>>
+
 }

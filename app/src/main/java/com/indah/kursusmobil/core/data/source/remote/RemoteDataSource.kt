@@ -1,12 +1,12 @@
 package com.indah.kursusmobil.core.data.source.remote
 
-import com.indah.kursusmobil.core.data.source.model.AlamatToko
+import com.indah.kursusmobil.core.data.source.model.Jadwal
 import com.indah.kursusmobil.core.data.source.remote.network.ApiService
 import com.indah.kursusmobil.core.data.source.remote.request.CreateKursusRequest
 import com.indah.kursusmobil.core.data.source.remote.request.LoginRequest
 import com.indah.kursusmobil.core.data.source.remote.request.RegisterRequest
 import com.indah.kursusmobil.core.data.source.remote.request.UpdateProfileRequest
-import com.indah.kursusmobil.util.getTokoId
+import com.indah.kursusmobil.util.getKursusId
 import okhttp3.MultipartBody
 
 class RemoteDataSource(private val api: ApiService) {
@@ -24,9 +24,9 @@ class RemoteDataSource(private val api: ApiService) {
 
     suspend fun getUser(id: Int? = null) = api.getUser(id)
 
-    suspend fun getAlamatToko() = api.getAlamatToko(getTokoId())
-    suspend fun createAlamatToko(data: AlamatToko) = api.createAlamatToko(data)
-    suspend fun updateAlamatToko(data: AlamatToko) = api.updateAlamatToko(data.id, data)
-    suspend fun deleteAlamatToko(id: Int?) = api.deleteAlamatToko(id)
+    suspend fun getJadwal() = api.getJadwal(getKursusId())
+    suspend fun createJadwal(data: Jadwal) = api.createJadwal(data)
+    suspend fun updateJadwal(data: Jadwal) = api.updateJadwal(data.id, data)
+    suspend fun deleteJadwal(id: String?) = api.deleteJadwal(id)
 
 }

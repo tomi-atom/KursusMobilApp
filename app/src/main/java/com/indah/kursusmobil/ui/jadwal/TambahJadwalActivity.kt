@@ -2,17 +2,18 @@ package com.indah.kursusmobil.ui.jadwal
 
 import android.os.Bundle
 import com.indah.kursusmobil.core.data.source.model.AlamatToko
+import com.indah.kursusmobil.core.data.source.model.Jadwal
 import com.indah.kursusmobil.core.data.source.remote.network.State
-import com.indah.kursusmobil.databinding.ActivityTambahAlamatTokoBinding
+import com.indah.kursusmobil.databinding.ActivityTambahJadwalBinding
 import com.indah.kursusmobil.ui.base.MyActivity
 import com.indah.kursusmobil.util.defaultError
-import com.indah.kursusmobil.util.getTokoId
+import com.indah.kursusmobil.util.getKursusId
 import com.inyongtisto.myhelper.extension.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class TambahJadwalActivity : MyActivity() {
 
-    private lateinit var binding: ActivityTambahAlamatTokoBinding
+    private lateinit var binding: ActivityTambahJadwalBinding
     private val viewModel: JadwalViewModel by viewModel()
     private var provinsiId: Int? = null
     private var kotaId: Int? = null
@@ -23,9 +24,9 @@ class TambahJadwalActivity : MyActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityTambahAlamatTokoBinding.inflate(layoutInflater)
+        binding = ActivityTambahJadwalBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setToolbar(binding.lyToolbar.toolbar, "Tambah Alamat")
+        setToolbar(binding.lyToolbar.toolbar, "Tambah Jadwal")
 
         setupUI()
         mainButton()
@@ -37,7 +38,7 @@ class TambahJadwalActivity : MyActivity() {
         val listKota = listOf("Pilih Kota", "Lamongan", "Semarang", "Bogor")
         val listKecamatan = listOf("Pilih Kecamatan", "Solokuro", "Ngalian", "Ngaglik")
 
-        binding.spnProvinsi.setOnPositionSelectedListener(this, listProvinsi) {
+        /*binding.spnProvinsi.setOnPositionSelectedListener(this, listProvinsi) {
             if (it == 0) {
                 provinsiId = null
             } else {
@@ -65,7 +66,7 @@ class TambahJadwalActivity : MyActivity() {
                 kecamatanId = 5505
                 kecamatan = listKecamatan[it]
             }
-        }
+        }*/
     }
 
     private fun mainButton() {
@@ -75,11 +76,11 @@ class TambahJadwalActivity : MyActivity() {
                 if (validate()) simpan()
             }
             lyToolbar.btnSimpan.setOnLongClickListener {
-                edtLabel.setText("Rumah")
-                edtAlamat.setText("Jl. Kenangan bersama mantan")
-                edtKodePos.setText("98347")
-                edtEmail.setText("email@gmail.com")
-                edtPhone.setText("0812345678")
+              //  edtLabel.setText("Rumah")
+                //edtAlamat.setText("Jl. Kenangan bersama mantan")
+                //edtKodePos.setText("98347")
+                //edtEmail.setText("email@gmail.com")
+                //edtPhone.setText("0812345678")
                 return@setOnLongClickListener true
             }
         }
@@ -87,7 +88,7 @@ class TambahJadwalActivity : MyActivity() {
 
     private fun validate(): Boolean {
         binding.apply {
-            if (edtLabel.isEmpty()) return false
+           /* if (edtLabel.isEmpty()) return false
             if (edtAlamat.isEmpty()) return false
             if (edtKodePos.isEmpty()) return false
             if (edtEmail.isEmpty()) return false
@@ -103,27 +104,20 @@ class TambahJadwalActivity : MyActivity() {
             if (kecamatanId == null) {
                 toastSimple("Harap pilih Kecamatan")
                 return false
-            }
+            }*/
         }
         return true
     }
 
     private fun simpan() {
-        val reqData = AlamatToko(
-            tokoId = getTokoId(),
-            label = binding.edtLabel.getString(),
-            alamat = binding.edtAlamat.getString(),
-            provinsi = provinsi,
-            kota = kota,
-            kecamatan = kecamatan,
-            provinsiId = provinsiId,
-            kotaId = kotaId,
-            kecamatanId = kotaId,
-            kodepost = binding.edtKodePos.getString(),
-            email = binding.edtEmail.getString(),
-            phone_number = binding.edtPhone.getString(),
+        val reqData = Jadwal(
+           // id_kursus = getKursusId(),
+           // label = binding.edtLabel.getString(),
+           // alamat = binding.edtAlamat.getString(),
+            //provinsi = provinsi,
+
         )
-        viewModel.create(reqData).observe(this) {
+       /* viewModel.create(reqData).observe(this) {
             when (it.state) {
                 State.SUCCESS -> {
                     progress.dismiss()
@@ -138,7 +132,7 @@ class TambahJadwalActivity : MyActivity() {
                     progress.show()
                 }
             }
-        }
+        }*/
     }
 
     override fun onSupportNavigateUp(): Boolean {

@@ -33,15 +33,7 @@
             android:text="@string/tidak_ada_data"
             android:visibility="gone" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_pilih"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
-            android:layout_alignParentBottom="true"
-            android:text="@string/pilih_alamat"
 
-            android:textAllCaps="false"
-            android:textSize="@dimen/_13sdp" />
 
     </RelativeLayout>
 
