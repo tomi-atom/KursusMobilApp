@@ -30,22 +30,7 @@
                 android:src="@drawable/ic_placeholder"
                 app:tint="@color/white" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:text="Dikirim ke"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_11ssp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_3sdp"
-                android:text="Kontrakan Tisto"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_11ssp"
-                android:textStyle="bold" />
+           
 
         </LinearLayout>
 

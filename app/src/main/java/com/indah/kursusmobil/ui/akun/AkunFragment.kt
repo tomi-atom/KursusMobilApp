@@ -70,9 +70,9 @@ class AkunFragment : Fragment() {
 
                 Picasso.get().load(USER_URL + user.image).into(binding.imageProfile)
 
-                if (user.toko != null) {
+                if (user.kursus != null) {
                     tvStatusToko.toGone()
-                    tvNameToko.text = user.toko?.name
+                    tvNameToko.text = user.kursus?.status
                     binding.btnToko.setOnClickListener {
                         intentActivity(KursusSayaActivity::class.java)
                     }

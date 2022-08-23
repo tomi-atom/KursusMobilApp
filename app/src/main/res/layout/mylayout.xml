@@ -9,25 +9,6 @@
     android:orientation="vertical"
     tools:context="com.indah.kursusmobil.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hai I'm Tisto"
-        android:textColor="#030303"
-        android:textSize="@dimen/_35ssp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="If You like this video, please"
-        android:textColor="#030303"
-        android:textSize="@dimen/_25ssp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/_120sdp"
-        android:src="@drawable/subscribe" />
+   
 
 </LinearLayout>

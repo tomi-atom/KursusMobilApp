@@ -2,10 +2,7 @@ package com.indah.kursusmobil.ui.jadwal
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
-import android.content.Context
 import android.os.Bundle
-import android.widget.TextView
-import com.indah.kursusmobil.core.data.source.model.AlamatToko
 import com.indah.kursusmobil.core.data.source.model.Jadwal
 import com.indah.kursusmobil.core.data.source.remote.network.State
 import com.indah.kursusmobil.databinding.ActivityTambahJadwalBinding
@@ -151,10 +148,10 @@ class TambahJadwalActivity : MyActivity() {
 
     private fun validate(): Boolean {
         binding.apply {
-           /* if (edtLabel.isEmpty()) return false
-            if (edtAlamat.isEmpty()) return false
-            if (edtKodePos.isEmpty()) return false
-            if (edtEmail.isEmpty()) return false
+            if (edtTanggal.isEmpty()) return false
+            if (edtJamMulai.isEmpty()) return false
+            if (edtJamAkhir.isEmpty()) return false
+            /*if (edtEmail.isEmpty()) return false
             if (edtPhone.isEmpty()) return false
             if (provinsiId == null) {
                 toastSimple("Harap pilih Provinsi")
@@ -174,13 +171,13 @@ class TambahJadwalActivity : MyActivity() {
 
     private fun simpan() {
         val reqData = Jadwal(
-           // id_kursus = getKursusId(),
-           // label = binding.edtLabel.getString(),
-           // alamat = binding.edtAlamat.getString(),
-            //provinsi = provinsi,
+            id_kursus = getKursusId(),
+            tanggal = binding.edtTanggal.getString(),
+            jam_mulai = binding.edtJamMulai.getString(),
+            jam_akhir = binding.edtJamAkhir.getString(),
 
         )
-       /* viewModel.create(reqData).observe(this) {
+        viewModel.create(reqData).observe(this) {
             when (it.state) {
                 State.SUCCESS -> {
                     progress.dismiss()
@@ -195,7 +192,7 @@ class TambahJadwalActivity : MyActivity() {
                     progress.show()
                 }
             }
-        }*/
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

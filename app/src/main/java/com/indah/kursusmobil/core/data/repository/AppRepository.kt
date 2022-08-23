@@ -29,7 +29,7 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
                     emit(Resource.success(user))
                     logs("succes:" + body.toString())
                 } else {
-                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error dongs", null))
+                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error ", null))
                     logs("Error:" + "keteragan error")
                 }
             }
@@ -51,7 +51,7 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
                     emit(Resource.success(user))
                     logs("succes:" + body.toString())
                 } else {
-                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error dongs", null))
+                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error ", null))
                     logs("Error:" + "keteragan error")
                 }
             }
@@ -71,7 +71,7 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
                     Prefs.setUser(user)
                     emit(Resource.success(user))
                 } else {
-                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error dongs", null))
+                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error ", null))
                 }
             }
         } catch (e: Exception) {
@@ -89,7 +89,7 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
                     Prefs.setUser(user)
                     emit(Resource.success(user))
                 } else {
-                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error dongs", null))
+                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error ", null))
                 }
             }
         } catch (e: Exception) {
@@ -105,7 +105,7 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
                     val body = it.body()?.data
                     emit(Resource.success(body))
                 } else {
-                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error dongs", null))
+                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error ", null))
                 }
             }
         } catch (e: Exception) {
@@ -124,7 +124,7 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
                     Prefs.setUser(user)
                     emit(Resource.success(user))
                 } else {
-                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error dongs", null))
+                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error ", null))
                 }
             }
         } catch (e: Exception) {
@@ -142,7 +142,7 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
 
                     emit(Resource.success(data))
                 } else {
-                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error dongs", null))
+                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error ", null))
                 }
             }
         } catch (e: Exception) {
@@ -158,7 +158,7 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
                     val body = it.body()?.data
                     emit(Resource.success(body))
                 } else {
-                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error dongs", null))
+                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error ", null))
                 }
             }
         } catch (e: Exception) {
@@ -174,7 +174,7 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
                     val body = it.body()?.data
                     emit(Resource.success(body))
                 } else {
-                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error dongs", null))
+                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error ", null))
                 }
             }
         } catch (e: Exception) {
@@ -192,7 +192,7 @@ class AppRepository(val local: LocalDataSource, val remote: RemoteDataSource) {
 
                     emit(Resource.success(data))
                 } else {
-                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error dongs", null))
+                    emit(Resource.error(it.getErrorBody()?.message ?: "Default error ", null))
                 }
             }
         } catch (e: Exception) {

@@ -23,11 +23,13 @@ object DummyData {
 
     )
     val listJadwal = listOf(
-        Jadwal(id = "1", id_kursus = "2", id_instruktur = "Instruktur",id_mobil = "Avanza", tanggal = "20-8-2022", jam_mulai = "14.00", jam_akhir = "16.00", status = "Kursus"),
+        Jadwal(
+            id = "1", id_kursus = 2, id_instruktur = "Instruktur",
+            id_mobil = "Avanza", tanggal = "20-8-2022", jam_mulai = "14.00", jam_akhir = "16.00", status = "Kursus"),
 
     )
     val listKursus = listOf(
-        Kursus(id = "1", id_peserta = "2", biaya = 1500000,jemput = false, biaya_jemput = 0,sim = false, biaya_sim = 0, diskon = 0,status  = "Kursus "),
+        Kursus(id = 1, id_peserta = "2", biaya = 1500000,jemput = false, biaya_jemput = 0,sim = false, biaya_sim = 0, diskon = 0,status  = "Kursus "),
 
         )
 }

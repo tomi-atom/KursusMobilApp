@@ -11,5 +11,5 @@ data class User(
     val address: String?,
     val updated_at: String?,
     val created_at: String?,
-    var toko: Toko?
+    var kursus: Kursus
 )

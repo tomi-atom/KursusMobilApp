@@ -1,13 +1,11 @@
 package com.indah.kursusmobil.ui.jadwal
 
 import android.os.Bundle
-import com.indah.kursusmobil.core.data.source.model.AlamatToko
 import com.indah.kursusmobil.core.data.source.model.Jadwal
 import com.indah.kursusmobil.core.data.source.remote.network.State
 import com.indah.kursusmobil.databinding.ActivityTambahJadwalBinding
 import com.indah.kursusmobil.ui.base.MyActivity
 import com.indah.kursusmobil.util.defaultError
-import com.indah.kursusmobil.util.getKursusId
 import com.inyongtisto.myhelper.extension.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

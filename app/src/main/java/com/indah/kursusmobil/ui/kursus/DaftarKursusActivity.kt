@@ -1,6 +1,7 @@
 package com.indah.kursusmobil.ui.kursus
 
 import android.os.Bundle
+import com.indah.kursusmobil.core.data.source.model.Kursus
 import com.indah.kursusmobil.core.data.source.model.Toko
 import com.indah.kursusmobil.core.data.source.remote.network.State
 import com.indah.kursusmobil.core.data.source.remote.request.CreateKursusRequest
@@ -43,15 +44,11 @@ class DaftarKursusActivity : MyActivity() {
                 State.SUCCESS -> {
                     progress.dismiss()
                     val data = it.data
-                    toastSimple("nama Toko:" + data?.name)
+                    toastSimple("n:" + data?.name)
                     intentActivity(KursusSayaActivity::class.java)
 
                     val user = Prefs.getUser()
-                    user?.toko = Toko(
-                        id = data?.id,
-                        name = data?.name,
-                        kota = data?.kota
-                    )
+
                     Prefs.setUser(user)
                     finish()
                 }

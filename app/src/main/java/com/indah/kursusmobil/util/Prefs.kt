@@ -20,6 +20,6 @@ object Prefs : KotprefModel() {
     }
 }
 
-fun getKursusId() = Prefs.getUser()?.toko?.id
+fun getKursusId() = Prefs.getUser()?.kursus?.id
 
 

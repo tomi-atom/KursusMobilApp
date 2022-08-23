@@ -27,7 +27,7 @@ class KursusSayaActivity : AppCompatActivity() {
         val user = Prefs.getUser()
         if (user != null) {
             binding.apply {
-                if (user.toko != null) {
+                if (user.kursus != null) {
 
                 }
             }
