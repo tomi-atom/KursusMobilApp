@@ -11,6 +11,7 @@ import com.indah.kursusmobil.databinding.FragmentAkunBinding
 import com.indah.kursusmobil.ui.jadwal.ListJadwalActivity
 import com.indah.kursusmobil.ui.kursus.DaftarKursusActivity
 import com.indah.kursusmobil.ui.kursus.KursusSayaActivity
+import com.indah.kursusmobil.ui.updateProfile.UpdateProfileActivity
 import com.indah.kursusmobil.util.Constants.USER_URL
 import com.indah.kursusmobil.util.Prefs
 import com.inyongtisto.myhelper.extension.getInitial
@@ -51,7 +52,7 @@ class AkunFragment : Fragment() {
         }
 
         binding.btnUpdate.setOnClickListener {
-            intentActivity(ListJadwalActivity::class.java)
+            intentActivity(UpdateProfileActivity::class.java)
         }
 
 
